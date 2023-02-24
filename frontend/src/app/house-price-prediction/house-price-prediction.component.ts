@@ -33,9 +33,9 @@ export class HousePricePredictionComponent implements OnInit {
     this.housePricePredictionService.getZipcodes().subscribe(data => {
       if (data) {
         this.zipcodeList = data.zipcode_list;
-        this.filteredOptions = new Observable((subscriber) => {
-          subscriber.next(this.getTopTenFromList(this.zipcodeList));
-        });
+        // this.filteredOptions = new Observable((subscriber) => {
+        //   subscriber.next(this.getTopTenFromList(this.zipcodeList));
+        // });
       }
     });
 
@@ -83,7 +83,7 @@ export class HousePricePredictionComponent implements OnInit {
   }
 
   private _filter(value: string): string[] {
-    let filteredValue = this.zipcodeList.filter(zipcode => String(zipcode).includes(value))
+    let filteredValue = this.zipcodeList.filter(zipcode => String(zipcode).startsWith(value))
     return this.getTopTenFromList(filteredValue);
   }
 
