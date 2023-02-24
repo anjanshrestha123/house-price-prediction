@@ -1,6 +1,5 @@
-
 .house-price-prediction-card {
-    width: 500px;
+    width: 400px;
 }
 
 .container {
@@ -12,9 +11,33 @@
 }
 
 .form-field-height {
-    width: 400px;
+    width: 350px;
 }
 
 .adjust-margin {
     margin-left: 50px;
+}
+
+.house-price-prediction-card-action {
+    padding: 0;
+}
+
+.form-field-container{
+    margin-bottom: 15px;
+}
+
+.error-container {
+    color: red;
+}
+
+.range-list-item {
+    font-size: 14px;
+}
+
+.range-chip-item {
+    padding-left:30px;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    padding: 0;
 }
